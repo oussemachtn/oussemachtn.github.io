@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #003147;
+  --secondary-color: #03a9f4;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.container {
+  max-width: 1000px;
+  display: grid;
+  background: #fff;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.25);
+  margin: 50px auto;
+}
+
+/* LEFT SIDE */
+.left_side {
+  background-color: var(--primary-color);
+  padding: 40px;
+}
+
+.about_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about_me img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about_me h2,
+.about_me h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.about_me h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.about_me h3 {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.left_side .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.contact_info ul li {
+  /* list-style-type: none; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.contact_info ul li i {
+  color: var(--secondary-color);
+}
+
+.contact_info ul li .text {
+  font-weight: 300;
+  color: #fff;
+}
+
+.education li {
+  list-style-type: none;
+  margin: 10px 0px;
+}
+
+.education h4 {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.education h5 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.education h5.degree {
+  font-weight: 500;
+}
+
+.languages li {
+  list-style-type: none;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.languages .percent_container {
+  background: #081921;
+  height: 6px;
+  margin-top: 5px;
+}
+
+.languages .percent {
+  background: var(--secondary-color);
+  height: 100%;
+}
+
+/* RIGHT SIDE */
+.right_side {
+  padding: 40px;
+}
+
+.right_side .title {
+  color: var(--primary-color);
+}
+
+.right_side p {
+  color: #333;
+}
+
+.profile,
+.experience,
+.skills {
+  margin-bottom: 40px;
+}
+
+.experience .box {
+  display: flex;
+  margin: 20px 0;
+}
+
+.experience .year_company {
+  min-width: 150px;
+}
+
+.experience .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.experience .content h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+}
+
+.skill {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+
+.skill h4 {
+  color: #848c99;
+  font-weight: 500;
+}
+
+.skill .percent_container {
+  height: 10px;
+  background: #f0f0f0;
+}
+
+.skill .percent {
+  /* height: 100%; */
+  height: 10px;
+  background: var(--secondary-color);
+}
+
+.interests ul {
+  list-style-type: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.interests i {
+  color: var(--secondary-color);
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience .box {
+    flex-direction: column;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about_me {
+  animation-name: aboutme;
+  animation-duration: 4s;
+}
+
+@keyframes aboutme {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
